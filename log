@@ -1,0 +1,45 @@
+Starting server on port 843
+Server started. Waiting for connections.
+Mon Jan 28 17:00:30 2013: Connection from localhost
+Input: 
+Mon Jan 28 17:01:36 2013: Connection from localhost
+Input: GET / HTTP/1.1
+Host: 127.0.0.1:843
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4
+Accept-Charset: windows-1251,utf-8;q=0.7,*;q=0.3
+
+
+Mon Jan 28 17:01:46 2013: Connection from localhost
+Input: 
+Mon Jan 28 17:02:00 2013: Connection from localhost
+Input: GET / HTTP/1.1
+Host: 127.0.0.1:843
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4
+Accept-Charset: windows-1251,utf-8;q=0.7,*;q=0.3
+
+
+Mon Jan 28 17:02:24 2013: Connection from localhost
+Input: 
+Mon Jan 28 17:02:29 2013: Connection from localhost
+Input: GET / HTTP/1.1
+Host: 127.0.0.1:843
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.94 Safari/537.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4
+Accept-Charset: windows-1251,utf-8;q=0.7,*;q=0.3
+
+
+Mon Jan 28 17:03:22 2013: Connection from localhost
+Input: 
+Mon Jan 28 17:08:14 2013: Connection from localhost
+Input: 

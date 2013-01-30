@@ -1,0 +1,71 @@
+Конфиг:
+=========
+IP:Port сервера ( наши: 95.79.54.185:4000 )
+
+Типы шифрования:
+1) Без шифрования
+2) Blowfish (библиотека: Turbo Power LockBox)
+3) SSL (библиотека SecureBlackBox / SB_SUITE_DH_ANON_RC4_MD5)
+// нагуглил suit'ы для OpenSSL:
+// SSL_DH_anon_EXPORT_WITH_RC4_40_MD5		EXP-ADH-RC4-MD5
+// SSL_DH_anon_WITH_RC4_128_MD5			ADH-RC4-MD5
+
+
+// само собой библиотеки чисто для Delphi и если писать под Flash - надо будет это чем-то заменять)
+// с шифрованием я сломал себе мозг 4 раза. дальше пусть фрилансеры разбираются
+
+
+Наш сервер сейчас работает в режиме БЕЗ ШИФРОВАНИЯ. (до этого работал в режиме BlowFish помоему)
+попробуй кстати подключиться клиентом:
+    в реестре HKEY_CURRENT USER\Software\PokerSatellites\Settings найди параметр "SSL" (или что-то в этом роде)
+    и измени его на "0" если там стоит что-то другое.
+    пробуй подключиться...
+
+
+
+
+
+структура протокола:
+======================
+(открытым текстом, без шифрования)
+
+
+&1&1&1[команда]&2&2&2
+
+каждые N секунд посылается команда "<ping/>"
+
+
+
+первый посылаемый пакет от клиента к серверу при соединении:
+
+
+&1&1&1<connect csaid="1" csabuild="200509010" affiliateid="1" advertisementid="0" macaddress="12-23-34-45-56-67" internalip="111.222.333.444" internalhost="localhost"/>&2&2&2
+// само собой нужно подставить правильные значения
+
+ответ сервера:
+
+&1&1&1<object name="session"><connect result="0" sessionid="79658" tournamentlimit="4" processlimit="4" tournamenttablelimit="4" recordhandlimit="1" playperiod="Open" realmoneytablesmsg="" loginurl="http://" registerurl="http://" findprofileurl="http://"/></object>&2&2&2
+
+
+
+
+регистрация пользователя (первым пакетом) проходит на ура:
+
+
+&1&1&1<objects>
+<object name="user">
+<uoregister loginname="user0"
+password="123123"
+firstname="user"
+lastname="user"
+email="user0@mail.com"
+showlocation = "0"
+location="Somewhere in the Earth"
+affiliateid="1"
+advertisementid="0"
+sexid="0"/>
+</object>
+</objects>&2&2&2
+
+
+Все остальные команды можно найти либо в исходниках либо, как я понял, у тебя в документе.
